@@ -48,7 +48,6 @@ public class JRCLinux {
 			 * This basic example does not handle stderr, which is sometimes
 			 * dangerous (please read the FAQ).
 			 */
-
 			InputStream stdout = new StreamGobbler(sess.getStdout());
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(stdout));
@@ -61,15 +60,12 @@ public class JRCLinux {
 			}
 
 			/* Show exit status, if available (otherwise "null") */
-
 			System.out.println("ExitCode: " + sess.getExitStatus());
 
 			/* Close this session */
-
 			sess.close();
 
 			/* Close the connection */
-
 			conn.close();
 
 		} catch (IOException e) {
