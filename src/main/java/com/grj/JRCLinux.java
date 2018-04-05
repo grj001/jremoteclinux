@@ -17,11 +17,9 @@ public class JRCLinux {
 
 		try {
 			/* Create a connection instance */
-
 			Connection conn = new Connection(hostname);
 
 			/* Now connect */
-
 			conn.connect();
 
 			/*
@@ -29,7 +27,6 @@ public class JRCLinux {
 			 * "Authentication method password not supported by the server at this stage."
 			 * then please check the FAQ.
 			 */
-
 			boolean isAuthenticated = 
 					conn.authenticateWithPassword(username, password);
 
@@ -37,7 +34,6 @@ public class JRCLinux {
 				throw new IOException("Authentication failed.");
 
 			/* Create a session */
-
 			Session sess = conn.openSession();
 
 			sess.execCommand("uname -a && date && uptime && who");
